@@ -1,6 +1,6 @@
 # Openapi: Generated CurrentAccount Stub API
  
-This Spring-boot project generates a unimplemented API stub based on the [`CurrentAccount.yaml`](https://github.com/mpirotaiswilton-IW/OpenAPI-generator-Springboot/blob/main/openapi-current-account-stub/src/main/resources/CurrentAccount.yaml"link to file in GitHub repository") file. The solution can be dockerized alongside a Postgres SQL Database and PGAdmin container. Since the API is a stub, it does not contain any functional component, though it can be run and tested without functionality. 
+This Spring-boot project generates a unimplemented API stub based on the [CurrentAccount.yaml](https://github.com/mpirotaiswilton-IW/OpenAPI-generator-Springboot/blob/main/openapi-current-account-stub/src/main/resources/CurrentAccount.yaml "link to file in GitHub repository") file. The solution can be dockerized alongside a Postgres SQL Database and PGAdmin container. Since the API is a stub, it does not contain any functional component, though it can be run and tested without functionality. 
 
 ### Summary
 

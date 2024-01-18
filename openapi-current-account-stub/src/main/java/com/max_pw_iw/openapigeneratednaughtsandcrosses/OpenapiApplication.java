@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OpenapigeneratednaughtsandcrossesApplication {
+public class OpenapiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OpenapigeneratednaughtsandcrossesApplication.class, args);
+		SpringApplication.run(OpenapiApplication.class, args);
 	}
 
 }

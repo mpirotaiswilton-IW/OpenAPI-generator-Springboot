@@ -1,10 +1,10 @@
-# Openapi: Generated Naughts-and-Crosses Stub API
+# Openapi: Generated CurrentAccount Stub API
  
-This Spring-boot project generates a unimplemented API stub based on the [`naughts-and-crosses-open-api.yaml`](https://github.com/mpirotaiswilton-IW/open-api-generated-naughts-and-crosses/blob/main/src/main/resources/naughts-and-crosses-open-api.yaml "link to file in GitHub repository") file. The solution can be dockerized alongside a Postgres SQL Database and PGAdmin container. Since the API is a stub, it does not contain any functional component, though it can be run and tested without functionality. 
+This Spring-boot project generates a unimplemented API stub based on the [`CurrentAccount.yaml`](https://github.com/mpirotaiswilton-IW/open-api-generated-naughts-and-crosses/blob/main/src/main/resources/CurrentAccount.yaml "link to file in GitHub repository") file. The solution can be dockerized alongside a Postgres SQL Database and PGAdmin container. Since the API is a stub, it does not contain any functional component, though it can be run and tested without functionality. 
 
 ### Summary
 
-[Openapi: Generated Naughts-and-Crosses API](#openapi-generated-naughts-and-crosses-stub-api)
+[Openapi: Generated CurrentAccount Stub API](#openapi-generated-currentaccount-stub-api)
 * [Summary](#summary)
 * [Setup and Pre-requisites](#setup-and-pre-requisites)
 * [Testing](#testing)
@@ -20,7 +20,8 @@ This Spring-boot project generates a unimplemented API stub based on the [`naugh
 
 ## Deployment
 
-1. Using a Command Line Interface used to run Docker and docker-compose commands, change directory to the downloaded/cloned repository
+1. Using a Command Line Interface used to run Docker and docker-compose commands, change directory in the downloaded/cloned repository to the directory containing the `Dockerfile` and `docker-compose.yaml` files
+
 2. Run the following command: 
 
 ```
@@ -28,13 +29,13 @@ docker-compose up
 ```
 
 3. 3 docker containers should now be running:
-    * `openapi-naughts-and-crosses-stub-api`: where the spring-boot api image, built using a Dockerfile, is containerized
+    * `openapi-current-account-stub-api`: where the spring-boot api image, built using a Dockerfile, is containerized
     * `db`: where a Postgres database is containerized and used by the API
-    * `openapi-naughts-and-crosses-stub-pgadmin`: where a pgAdmin interface is containerized. This is used to monitor our Postgres database container
+    * `openapi-current-account-stub-pgadmin`: where a pgAdmin interface is containerized. This is used to monitor our Postgres database container
 
 ## Testing
 
 1. With a web browser of your choice, navigate to <http://localhost:8080/swagger-ui/index.html>
 2. On this page, you'll see every endpoint that the API stub has available
-3. Under any endpoint, select one and then select the `Try it out` button
-4. Fill in any relevant request body parameters as you see fit, then press the blue `Execute` button. This should yield a `501 Unimplemented` response code
+3. Select the `/BIAN-3/BIAN/CurrentAccount/11.0.0/CurrentAccount/{currentaccountid}/Retrieve` enpoint and then select the `Try it out` button
+4. Fill in the `currentaccountid` parameters with a number greater than 0, then press the blue `Execute` button. This should yield a `501 Unimplemented` response code

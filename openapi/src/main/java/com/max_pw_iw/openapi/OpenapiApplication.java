@@ -1,4 +1,4 @@
-package com.max_pw_iw.openapigeneratednaughtsandcrosses;
+package com.max_pw_iw.openapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -29,9 +29,9 @@ docker-compose up --build
 ```
 
 3. 3 docker containers should now be running:
-    * `openapi-current-account-stub-api`: where the spring-boot api image, built using a Dockerfile, is containerized
+    * `openapi-app`: where the spring-boot api image, built using a Dockerfile, is containerized
     * `db`: where a Postgres database is containerized and used by the API
-    * `openapi-current-account-stub-pgadmin`: where a pgAdmin interface is containerized. This is used to monitor our Postgres database container
+    * `openapi-pgadmin`: where a pgAdmin interface is containerized. This is used to monitor our Postgres database container
 
 ## Testing
 

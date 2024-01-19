@@ -20,12 +20,12 @@ This Spring-boot project generates a unimplemented API stub based on the [Curren
 
 ## Deployment
 
-1. Using a Command Line Interface used to run Docker and docker-compose commands, change directory in the downloaded/cloned repository to the directory containing the `Dockerfile` and `docker-compose.yaml` files
+1. Using a Command Line Interface used to run Docker and docker-compose commands, change directory to the downloaded/cloned repository then change directory to the `openapi` folder.
 
 2. Run the following command: 
 
 ```
-docker-compose up
+docker-compose up --build
 ```
 
 3. 3 docker containers should now be running:

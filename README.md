@@ -7,6 +7,10 @@ This Spring-boot project generates a unimplemented API stub based on the [Curren
 [Openapi: Generated CurrentAccount Stub API](#openapi-generated-currentaccount-stub-api)
 * [Summary](#summary)
 * [Setup and Pre-requisites](#setup-and-pre-requisites)
+* [Deployment](#deployment)
+    * [Deploy the API into a docker container:](#deploy-the-api-into-a-docker-container)
+        * [Using Docker Compose](#using-docker-compose)
+        * [By building an image, then creating a container](#by-building-an-image-then-running-it)
 * [Testing](#testing)
 
 ## Setup and Pre-requisites
@@ -22,16 +26,35 @@ This Spring-boot project generates a unimplemented API stub based on the [Curren
 
 1. Using a Command Line Interface used to run Docker and docker-compose commands, change directory to the downloaded/cloned repository then change directory to the `openapi` folder.
 
-2. Run the following command: 
+2. Create a .jar file of the API by running the following command:
+
+```
+./mvnw clean package
+```
+
+### Deploy the API into a docker container:
+
+#### Using Docker-compose:
+Run the following command: 
 
 ```
 docker-compose up --build
 ```
+#### By building an image, then creating a 
 
-3. 3 docker containers should now be running:
-    * `openapi-app`: where the spring-boot api image, built using a Dockerfile, is containerized
-    * `db`: where a Postgres database is containerized and used by the API
-    * `openapi-pgadmin`: where a pgAdmin interface is containerized. This is used to monitor our Postgres database container
+Run this command:
+
+```
+docker build -t openapi . 
+```
+
+Then run the following command:
+```
+docker run --name openapi-app openapi
+```
+---
+
+A docker container called `openapi-app` should now be running and ready for use.
 
 ## Testing
 

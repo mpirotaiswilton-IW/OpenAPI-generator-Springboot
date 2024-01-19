@@ -7,10 +7,10 @@ This Spring-boot project generates a unimplemented API stub based on the [Curren
 [Openapi: Generated CurrentAccount Stub API](#openapi-generated-currentaccount-stub-api)
 * [Summary](#summary)
 * [Setup and Pre-requisites](#setup-and-pre-requisites)
-* [Deployment](#deployment)
-    * [Deploy the API into a docker container:](#deploy-the-api-into-a-docker-container)
-        * [Using Docker Compose](#using-docker-compose)
-        * [By building an image, then creating a container](#by-building-an-image-then-running-it)
+* [Building a .jar file](#building-a-jar-file)
+* [Deploy the API into a docker container:](#deploy-the-api-into-a-docker-container)
+    * [Using Docker Compose](#using-docker-compose)
+    * [By building an image, then running a container](#by-building-an-image-then-running-a-docker-container)
 * [Testing](#testing)
 
 ## Setup and Pre-requisites
@@ -22,7 +22,7 @@ This Spring-boot project generates a unimplemented API stub based on the [Curren
 
 2. Clone this repository or download the .zip file from GitHub (extract the downloaded zip file )
 
-## Deployment
+## Building a .jar file
 
 1. Using a Command Line Interface used to run Docker and docker-compose commands, change directory to the downloaded/cloned repository then change directory to the `openapi` folder.
 
@@ -30,25 +30,32 @@ This Spring-boot project generates a unimplemented API stub based on the [Curren
 
 ```
 ./mvnw clean package
-```
+``` 
 
-### Deploy the API into a docker container:
+## Deploy the API into a docker container
+
+This next section can be done one of two ways:
+* Using Docker-Compose
+* By building an image, then running a docker container
+---
 
 #### Using Docker-compose:
-Run the following command: 
+For scalability, this option is best practice for deployment.
+
+To deploy the API into a docker container, run the following command: 
 
 ```
 docker-compose up --build
 ```
-#### By building an image, then creating a 
+#### By building an image, then running a docker container
 
-Run this command:
+Run this command to build an image that will run the API:
 
 ```
 docker build -t openapi . 
 ```
 
-Then run the following command:
+Then, to deploy a docker container with the image we just built, run the following command:
 ```
 docker run --name openapi-app openapi
 ```

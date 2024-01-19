@@ -37,5 +37,5 @@ docker-compose up --build
 
 1. With a web browser of your choice, navigate to <http://localhost:8080/swagger-ui/index.html>
 2. On this page, you'll see every endpoint that the API stub has available
-3. Select the `/BIAN-3/BIAN/CurrentAccount/11.0.0/CurrentAccount/{currentaccountid}/Retrieve` enpoint and then select the `Try it out` button
+3. Select the `/CurrentAccount/{currentaccountid}/Retrieve` enpoint and then select the `Try it out` button
 4. Fill in the `currentaccountid` parameters with a number greater than 0, then press the blue `Execute` button. This should yield a `501 Unimplemented` response code
